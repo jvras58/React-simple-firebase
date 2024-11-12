@@ -8,7 +8,7 @@ const Home = () => {
   const { data, loading } = useFetchData('cadrastro');
   const [filter, setFilter] = useState('');
 
-  const handleFilterChange = (e) => {
+  const filterHandle = (e) => {
     setFilter(e.target.value);
   };
 
@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold text-center mb-4">Tabela:</h1>
-      <FilterInput filter={filter} onFilterChange={handleFilterChange} />
+      <FilterInput filter={filter} onFilterChange={filterHandle} />
       <AffiliateCount count={countBBC} />
       {loading ? (
         <div className="flex justify-center items-center">
