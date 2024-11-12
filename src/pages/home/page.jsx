@@ -12,8 +12,8 @@ const Home = () => {
     setFilter(e.target.value);
   };
 
-  const filteredData = data.filter(item => item.afilhiado.includes(filter));
-  const countBBC = data.filter(item => item.afilhiado === 'bbc').length;
+  const filteredData = data ? data.filter(item => item.afilhiado && item.afilhiado.includes(filter)) : [];
+  const countBBC = data ? data.filter(item => item.afilhiado === 'bbc').length : 0;
 
   return (
     <div className="container mx-auto p-4">
