@@ -15,13 +15,13 @@ const Home = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold text-center mb-4">Dados Colecionados</h1>
+      <h1 className="text-2xl font-bold text-center mb-4">Tabela:</h1>
       <div className="mb-4">
         <input
           type="text"
           value={filter}
           onChange={handleFilterChange}
-          placeholder="Filtrar por Afilhiado"
+          placeholder="Filtrar pelo Campo"
           className="border p-2 w-full"
         />
       </div>
@@ -41,15 +41,17 @@ const Home = () => {
               <th className="py-2 px-4 border-b text-left">Nome</th>
               <th className="py-2 px-4 border-b text-left">CPF</th>
               <th className="py-2 px-4 border-b text-left">Afilhiado</th>
+              <th className="py-2 px-4 border-b text-left">Testing</th>
             </tr>
           </thead>
           <tbody>
             {filteredData.map(item => (
               <tr key={item.id}>
-                <td className="py-2 px-4 border-b text-left">{item.id}</td>
-                <td className="py-2 px-4 border-b text-left">{item.nome}</td>
-                <td className="py-2 px-4 border-b text-left">{item.cpf}</td>
-                <td className="py-2 px-4 border-b text-left">{item.afilhiado}</td>
+                <td className="py-2 px-4 border-b text-left">{item?.id}</td>
+                <td className="py-2 px-4 border-b text-left">{item?.nome}</td>
+                <td className="py-2 px-4 border-b text-left">{item?.cpf}</td>
+                <td className="py-2 px-4 border-b text-left">{item?.afilhiado}</td>
+                <td className='py-2 px-4 border-b text-left'>{item?.testing}</td>
               </tr>
             ))}
           </tbody>
