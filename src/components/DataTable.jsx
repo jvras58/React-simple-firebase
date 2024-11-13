@@ -8,7 +8,7 @@ const DataTable = ({ data }) => (
     <th className="py-2 px-4 border-b text-left">ID</th>
     <th className="py-2 px-4 border-b text-left">Nome</th>
     <th className="py-2 px-4 border-b text-left">CPF</th>
-    <th className="py-2 px-4 border-b text-left">Afilhiado</th>
+    <th className="py-2 px-4 border-b text-left">afiliado</th>
     <th className="py-2 px-4 border-b text-left">Testing</th>
     </tr>
 </thead>

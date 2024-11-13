@@ -7,7 +7,7 @@ import DataTable from '../../components/DataTable';
 const Home = () => {
   const { data, loading } = useFetchData('cadrastro');
   const [filter, setFilter] = useState('');
-  const [filterField, setFilterField] = useState('afilhiado');
+  const [filterField, setFilterField] = useState('afiliado');
   const [isGenericFilter, setIsGenericFilter] = useState(false);
 
   const filterHandle = (e) => {
@@ -29,7 +29,7 @@ const Home = () => {
     return item[filterField] && item[filterField].includes(filter);
   }) : [];
 
-  const countBBC = data ? data.filter(item => item.afilhiado === 'bbc').length : 0;
+  const countBBC = data ? data.filter(item => item.afiliado === 'bbc').length : 0;
 
   return (
     <div className="container mx-auto p-4">
